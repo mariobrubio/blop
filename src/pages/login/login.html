@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>BLOP App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <img src="https://lh3.googleusercontent.com/0Fbah42XusIJa6TZRLnFZwQfyJrhpBjf36msjnRqCaCPyhcTVvLoDin22sQ48cD-v76HDOUPF-QrDcygGgJCUjT5Zgtd8xlHGVT39lqDVEI_4R8z1RHUubBoSzx3_7r1zVjkhprAyPsKHJ3P6bNm_JcgW2SIQVv1hERK3DccDLzEecq5AKHruSPGfwnmJMOhAdNUvFw4xq0hoLF0hzOzLGt4_guYQCi7BW5N_z-_strmSGQaaH3hWfwjBeHDN0ZLUvSZ-shCMMCG84LgIqk8E43pHiz4TzY7rdrPkTTjrlZ1-et-KCHoUIHixz9tupTTpp_3X6e2t2jJEYHYk2inTFSLFZoDtNbMofN02d2KylYUHJJuNHp8WcwXnMj89T544-bj9jk_rec_Eo8a171nkQXEDK9B22OjXHkfNyG7N1RP0XMUh0Fs3Zzozi85CP0vJzDrhv8ZeP7Tzpy6UJPlETADC1UgITZZwlU-feBRPu6zhZoXTrhaP67yxRXxIoSsDsYEA1R-YKFDBEAoD899u-O-bCqXTU4wv2BThMOZAZV8g5Wa4f3efIjyqeGEDhk8SLuEcD0vEJ76MC3IryJyrDvC0Ovyz-lu=w1366-h637"/>
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="tryLogin(loginForm.value)">
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>
+    </ion-item>
+
+    <button ion-button full class="submit-button" type="submit">
+      Iniciar sesión
+    </button>
+    <label class="error-message">{{errorMessage}}</label>
+
+    <br>
+    <div>
+      <p>¿No tienes cuenta? <a (click)="goRegisterPage()">¡Crea una ahora!</a></p>
+    </div>
+    <br>
+
+  </form>
+</ion-content>

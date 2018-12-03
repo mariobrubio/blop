@@ -20,7 +20,7 @@ import { environment } from '../environment/environment';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
-
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
     AuthService,
     TwitterConnect,
     UserService,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
